@@ -1,0 +1,4 @@
+ujson==1.35
+apistar==0.5.41
+pytest==5.2.2
+pytest-clarity==0.2.0a1
