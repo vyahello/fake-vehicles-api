@@ -1,6 +1,6 @@
 # Mock vehicle API
-A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) python Web API toolkit framework. 
-It is mostly used as a sample API for your project.
+A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) python WEB API toolkit framework. 
+This project is built only as a sample REST API toolkit.
 
 Fake data was generated from cool https://www.mockaroo.com source.
 
@@ -20,19 +20,20 @@ There are several endpoints already developed (others will be added soon):
   - `GET` request on `/` endpoint returns list of vehicles e.g `localhost:5000/`
 
 ### Testing
-Project is covered with both _unittests_ on code basis and _functional_ tests on REST API endpoints with [pytest](https://docs.pytest.org/en/latest) testing framework.
+Project is covered with both **_unittests_** on code basis and **_functional_** tests on REST API endpoints with [pytest](https://docs.pytest.org/en/latest) testing framework.
 It uses [pytest.ini](pytest.ini) configuration file.
 
 Please run next command from the root directory to start testing:
 ```bash
 ~ pytest
 ```
+Please open `test-report.html` file in your browser to see testing report.
 
 ### Debugging
 In case of code debugging we use a contemporary [pdb++](https://pypi.org/project/pdbpp) package as an easy-way to track your code.
 It is wrapper of a builtin [pbd](https://docs.python.org/3/library/pdb.html) package but with features extensions.
 
-To make it work just install it from `requirements.txt` file and use [breakpoint()](https://docs.python.org/3/library/functions.html#breakpoint) function call e.g:
+To make it work just install it from `requirements-dev.txt` file and use [breakpoint()](https://docs.python.org/3/library/functions.html#breakpoint) function call e.g:
 ```python
 class A:    
     def do_debug(self) -> None:
