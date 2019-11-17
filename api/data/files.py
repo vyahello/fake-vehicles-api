@@ -1,6 +1,13 @@
 """The module contains API to work wih files."""
 from abc import abstractmethod
-from typing import ContextManager, TextIO, Any
+from typing import ContextManager, TextIO, Any, Tuple
+
+
+def safe_file_of(filename: str, extensions: Tuple[str, ...]) -> str:
+    """Checks filename is valid."""
+    if not filename.endswith(extensions):
+        raise ValueError(f'"{filename}" does not end with "{extensions}" extensions')
+    return filename
 
 
 class File(ContextManager):
@@ -18,7 +25,7 @@ class File(ContextManager):
 class TextFile(File):
     """The class represents concrete text file."""
 
-    def __init__(self, name: str, mode: str = "r") -> None:
+    def __init__(self, name: str, mode: str) -> None:
         self._stream: TextIO = open(name, mode)
 
     def write(self, data: str) -> None:

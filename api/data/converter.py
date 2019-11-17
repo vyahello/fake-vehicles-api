@@ -5,7 +5,7 @@ import ujson as json
 _JsonType = Union[List[Any], Dict[Any, Any]]
 
 
-def to_dict(data: str) -> Dict[str, Any]:
+def to_dict(data: str) -> Dict[Any, Any]:
     """Converts given stream into a `dict` schema."""
     return json.loads(data)
 

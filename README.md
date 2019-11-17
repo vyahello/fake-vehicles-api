@@ -1,5 +1,5 @@
-# Mock cars API
-A lightweight fake cars API written in [API Star](https://docs.apistar.com/) python Web API toolkit framework. 
+# Mock vehicle API
+A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) python Web API toolkit framework. 
 It is mostly used as a sample API for your project.
 
 Fake data was generated from cool https://www.mockaroo.com source.
@@ -32,4 +32,5 @@ a.do_debug()
   git config --local user.email "vyahello@gmail.com"
   ```
 - `pip install -r requirements.txt` to install all project dependencies
+- `pip install -r requirements-dev.txt` to install all development dependencies
 
