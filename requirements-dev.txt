@@ -1,0 +1,6 @@
+apistar==0.5.41
+pytest==5.2.2
+pytest-clarity==0.2.0a1
+pytest-cov==2.8.1
+pdbpp==0.10.2
+black==19.10b0
