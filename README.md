@@ -27,6 +27,10 @@ Please run next command from the root directory to start testing:
 ```bash
 ~ pytest
 ```
+> If you would like to run only `smoke` tests or `unittests` please run tests with corresponding marker e.g:
+> 
+>`~ pytest -m smoke`
+
 Please open `test-report.html` file in your browser to see testing report.
 
 ### Debugging
