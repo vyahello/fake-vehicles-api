@@ -48,6 +48,12 @@ a: A = A()
 a.do_debug()
 ```
 
+To be able debug your application please pass `debug=True` parameter into `Setup` object while running an app e.g:
+```python
+if __name__ == "__main__":
+    _run_vehicle_api(Setup(debug=True))
+```
+
 ## Contributing
 - clone the repository
 - configure Git for the first time after cloning with your name and email
