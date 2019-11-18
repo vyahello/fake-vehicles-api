@@ -5,6 +5,7 @@ from enum import Enum
 class Status(Enum):
     """The class represents enumeration of HTTP statuses."""
 
+    SUCCESS: int = 200
     CREATED: int = 201
 
     @property

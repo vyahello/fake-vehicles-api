@@ -1,3 +1,4 @@
+"""The module contains API to work wih vehicles storage."""
 from typing import Dict, Any, Set
 from api.data.converter import to_dict
 from api.data.files import File, TextFile, safe_file_of

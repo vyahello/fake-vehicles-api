@@ -1,3 +1,4 @@
+"""The module contains API to work wih vehicles."""
 from apistar.types import Type
 from apistar.validators import Integer, String
 from api import LIST_OF_MANUFACTURERS

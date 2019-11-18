@@ -17,7 +17,13 @@ Run next command from the root of the project:
 
 ### API endpoints
 There are several endpoints already developed (others will be added soon):
-  - `GET` request on `/` endpoint returns list of vehicles e.g `localhost:5000/`
+  - `GET` request on `/` endpoint returns list of vehicles e.g:
+    > `curl localhost:5000/`
+  - `POST` request on `/` endpoint e.g:
+    > `curl -X POST` \
+    `-H "Content-type: application/json"` \
+    `-d {"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBAWV53589P465532"}` \
+    `localhost:5000/`
 
 ### Testing
 Project is covered with both **_unittests_** on code basis and **_functional_** tests on REST API endpoints with [pytest](https://docs.pytest.org/en/latest) testing framework.

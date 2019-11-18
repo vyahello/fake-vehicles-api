@@ -1,6 +1,7 @@
 import requests
 import pytest
 from apistar import TestClient
+from api.web.support import Status
 from tests.markers import smoke
 
 
@@ -11,7 +12,7 @@ def response(client: TestClient) -> requests.Response:
 
 @smoke
 def test_get_vehicles_status(response: requests.Response) -> None:
-    assert response.status_code == 200
+    assert response.status_code == Status.SUCCESS.code
 
 
 @smoke
