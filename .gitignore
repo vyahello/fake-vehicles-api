@@ -20,3 +20,7 @@ venv
 
 # coverage
 .coverage
+
+# pytest
+assets/
+test-report.html
