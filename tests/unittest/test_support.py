@@ -9,7 +9,8 @@ def test_status() -> None:
 
 
 @unittest
-def test_status_code() -> None:
+@pytest.mark.parametrize("status, code", [(Status.SUCCESS, 200), (Status.CREATED, 201), (Status.NOT_FOUND, 404)])
+def test_status_code(status: Status, code: int) -> None:
     assert Status.CREATED.code == 201
 
 

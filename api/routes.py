@@ -1,8 +1,10 @@
-from typing import List
+from typing import List, Dict
 from apistar.http import JSONResponse
 from api import list_of_vehicles
 from api.vehicle.vehicles import Vehicle
 from api.web.support import Status
+
+_error: Dict[str, str] = {"error": "vehicle not found"}
 
 
 def list_vehicles() -> List[Vehicle]:
@@ -36,3 +38,20 @@ def create_vehicle(vehicle: Vehicle) -> JSONResponse:
     vehicle.id_ = len(list_of_vehicles) + 1
     list_of_vehicles[vehicle.id_] = vehicle
     return JSONResponse(vehicle, status_code=Status.CREATED.code)
+
+
+def get_vehicle(vehicle_id: int) -> JSONResponse:
+    """Gets single vehicle.
+
+    Operates "/{id}" route on "GET" request e.g "http://127.0.0.1:5000/99".
+
+    Args:
+        vehicle_id: a vehicle ID e.g `2`
+
+    Returns:
+        http json response
+    """
+    vehicle: Vehicle = list_of_vehicles.get(vehicle_id)
+    if not vehicle:
+        return JSONResponse(_error, status_code=Status.NOT_FOUND.code)
+    return JSONResponse(vehicle, status_code=Status.SUCCESS.code)

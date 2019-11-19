@@ -7,6 +7,7 @@ class Status(Enum):
 
     SUCCESS: int = 200
     CREATED: int = 201
+    NOT_FOUND: int = 404
 
     @property
     def code(self) -> int:
