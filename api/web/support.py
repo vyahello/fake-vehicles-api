@@ -7,6 +7,7 @@ class Status(Enum):
 
     SUCCESS: int = 200
     CREATED: int = 201
+    NO_CONTENT: int = 204
     NOT_FOUND: int = 404
 
     @property
@@ -20,3 +21,4 @@ class Method(Enum):
     GET: str = "get"
     POST: str = "post"
     PUT: str = "put"
+    DELETE: str = "delete"

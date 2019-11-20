@@ -31,7 +31,9 @@ There are several endpoints already developed (others will be added soon):
     `-H "Content-type: application/json" \` \
     `-d '{"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBAWV53589P465532"}' \` \
     `localhost:5000/99`
-  
+  - `DELETE` request on `/{id}` to delete single vehicle e.g:
+    > `curl -X DELETE localhost:5000/99`
+
 ### Testing
 Project is covered with both **_unittests_** on code basis and **_functional_** tests on REST API endpoints with [pytest](https://docs.pytest.org/en/latest) testing framework.
 It uses [pytest.ini](pytest.ini) configuration file.

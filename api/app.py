@@ -1,6 +1,6 @@
 from typing import List
 from apistar import App, Route
-from api.routes import list_vehicles, create_vehicle, get_vehicle, update_vehicle
+from api.routes import list_vehicles, create_vehicle, get_vehicle, update_vehicle, delete_vehicle
 from dataclasses import dataclass
 from api.web.support import Method
 
@@ -22,6 +22,7 @@ _routes: List[Route] = [
     Route(_root, method=Method.POST.name, handler=create_vehicle),
     Route(_id, method=Method.GET.name, handler=get_vehicle),
     Route(_id, method=Method.PUT.name, handler=update_vehicle),
+    Route(_id, method=Method.DELETE.name, handler=delete_vehicle),
 ]
 api_app: App = App(_routes)
 

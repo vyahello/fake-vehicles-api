@@ -84,3 +84,20 @@ def update_vehicle(vehicle_id: int, vehicle: Vehicle) -> JSONResponse:
     vehicle.id_ = vehicle_id
     list_of_vehicles[vehicle_id] = vehicle
     return JSONResponse(vehicle, status_code=Status.SUCCESS.code)
+
+
+def delete_vehicle(vehicle_id: int) -> JSONResponse:
+    """Deletes vehicle by it's id.
+
+    Operates "/{id}" route on "DELETE" request e.g "http://127.0.0.1:5000/99"
+
+    Args:
+        vehicle_id: vehicle ID
+
+    Returns:
+        http json response
+    """
+    if not list_of_vehicles.get(vehicle_id):
+        return _error_response
+    del list_of_vehicles[vehicle_id]
+    return JSONResponse({}, status_code=Status.NO_CONTENT.code)
