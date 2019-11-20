@@ -7,6 +7,11 @@ from api.web.support import Status
 _error_response: JSONResponse = JSONResponse(content={"error": "vehicle not found"}, status_code=Status.NOT_FOUND.code)
 
 
+def index() -> str:
+    """Return welcome page."""
+    return "<h1>Fake Vehicles REST API</h1>"
+
+
 def list_vehicles() -> List[Vehicle]:
     """Returns a list of vehicles.
 
