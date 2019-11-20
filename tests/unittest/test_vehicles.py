@@ -46,7 +46,7 @@ def test_load_vehicles() -> None:
 def test_cars(storage: VehicleStorage) -> None:
     assert storage.list_vehicles() == {
         1: {"id_": 1, "manufacturer": "Mazda", "model": "RX-8", "year": 2006, "vin": "JTJBARBZ2F2356837"},
-        2: {"id_": 2, "manufacturer": "Honda", "model": "Civic Si", "year": 2003, "vin": "1N6AF0LY0FN792678"}
+        2: {"id_": 2, "manufacturer": "Honda", "model": "Civic Si", "year": 2003, "vin": "1N6AF0LY0FN792678"},
     }
 
 

@@ -15,7 +15,7 @@ def test_status_code(status: Status, code: int) -> None:
 
 
 @unittest
-@pytest.mark.parametrize("method", [Method.GET, Method.POST])
+@pytest.mark.parametrize("method", [Method.GET, Method.POST, Method.PUT])
 def test_method(method: Method) -> None:
     assert isinstance(method, Method)
 

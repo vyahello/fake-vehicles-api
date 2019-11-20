@@ -19,3 +19,4 @@ class Method(Enum):
 
     GET: str = "get"
     POST: str = "post"
+    PUT: str = "put"

@@ -53,9 +53,9 @@ def test_manufacturer_validation(response_fields_validation: requests.Response) 
 
 @smoke
 def test_model_validation(response_fields_validation: requests.Response) -> None:
-    assert response_fields_validation.json()["model"] == 'Must have no more than 30 characters.'
+    assert response_fields_validation.json()["model"] == "Must have no more than 30 characters."
 
 
 @smoke
 def test_year_validation(response_fields_validation: requests.Response) -> None:
-    assert response_fields_validation.json()["year"] == 'Must be less than or equal to 2050.'
+    assert response_fields_validation.json()["year"] == "Must be less than or equal to 2050."
