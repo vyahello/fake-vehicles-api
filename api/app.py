@@ -120,4 +120,4 @@ api_app: App = App(ROUTES, setup.dir_.templates, setup.dir_.static)
 
 
 if __name__ == "__main__":
-    api_app.serve(setup.host, setup.port, True)
+    api_app.serve(setup.host, setup.port, setup.debug)

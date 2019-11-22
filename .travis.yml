@@ -1,0 +1,8 @@
+language: python
+python: "3.8.0"
+script:
+    - ./run-code-analysis.sh install-dependencies
+after_success:
+  - coveralls
+notifications:
+  email: false
