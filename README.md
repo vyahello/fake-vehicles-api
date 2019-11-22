@@ -15,7 +15,7 @@ Run next command from the root of the project:
 ~ python vehicle_api.py
 ```
 
-After please open `localhost:5000/` or `localhost:5000/index.html` path in your browser to obtain home page. 
+After please open [localhost:5000/](localhost:5000/) or [localhost:5000/index.html](localhost:5000/index.html) path in your browser to obtain home page. 
 It will show you a page with available endpoints and usage details:
 
 ![Screenshot](static/demo.png)

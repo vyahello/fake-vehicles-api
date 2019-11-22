@@ -3,7 +3,7 @@ from api.app import ROUTES, api_app
 
 
 def test_count_routes() -> None:
-    assert len(ROUTES) == 6
+    assert len(ROUTES) == 7
 
 
 def test_first_route_type() -> None:
