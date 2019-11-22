@@ -1,5 +1,6 @@
 # Mock vehicles API
 >A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) 🌟 python WEB API toolkit framework. 
+> You can try it out at [https://fake-vehicles-api.herokuapp.com](https://fake-vehicles-api.herokuapp.com) as it is deployed on heroku.
 >This project is built only as a sample REST API toolkit.
 >
 >Fake data was generated from cool https://www.mockaroo.com source.
@@ -7,11 +8,14 @@
 [![Build Status](https://travis-ci.org/vyahello/fake-vehicles-api.svg?branch=master)](https://travis-ci.org/vyahello/fake-vehicles-api)
 [![Coverage Status](https://coveralls.io/repos/github/vyahello/fake-vehicles-api/badge.svg?branch=master)](https://coveralls.io/github/vyahello/fake-vehicles-api?branch=master)
 
-## Tools
+## Tools/features
 > - `python 3.8`
 > - `RESTful API`
-> - `travis CI`
 > - `pytest`
+> - `travis CI`
+> - `heroku`
+
+In addition it is `fully type annotated` and covered with bunch of static code analysis tools like `mypy`, `flake8`, `pylint`, `pydocstyle` and `black`.
 
 ## Usage
 Run next command from the root of the project:
@@ -23,6 +27,8 @@ After please open [localhost:5000/](http://localhost:5000/) or [localhost:5000/i
 It will show you a page with available endpoints and usage details:
 
 ![Screenshot](static/demo.png)
+
+## Development
 
 ### API endpoints
 There are several endpoints already developed (others will be added soon):
@@ -77,6 +83,28 @@ To be able debug your application please pass `debug=True` parameter into `Setup
 if __name__ == "__main__":
     _run_vehicle_api(Setup(debug=True))
 ```
+
+### Heroku deployment
+Please follow instructions from - https://python-responder.org/en/latest/deployment.html
+
+- Install heroku following by - https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+- Login to heroku
+```bash
+heroku login
+```
+- Create an application
+```bash
+heroku create fake-vehicles-api
+```
+- Commit and push repo into a heroku
+```bash
+git add . && git commit -m "My first heroku app" && git push heroku master
+```
+- Check heroku logs
+```bash
+heroku logs --tail
+```
+- Open an application via browser: https://fake-vehicles-api.herokuapp.com
 
 ## Release History
 
