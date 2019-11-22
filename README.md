@@ -4,9 +4,13 @@
 >
 >Fake data was generated from cool https://www.mockaroo.com source.
 
+[![Build Status](https://travis-ci.org/vyahello/fake-vehicles-api.svg?branch=master)](https://travis-ci.org/vyahello/fake-vehicles-api)
+[![Coverage Status](https://coveralls.io/repos/github/vyahello/fake-vehicles-api/badge.svg?branch=master)](https://coveralls.io/github/vyahello/fake-vehicles-api?branch=master)
+
 ## Tools
 > - `python 3.8`
 > - `RESTful API`
+> - `travis CI`
 > - `pytest`
 
 ## Usage
@@ -15,7 +19,7 @@ Run next command from the root of the project:
 ~ python vehicle_api.py
 ```
 
-After please open [localhost:5000/](localhost:5000/) or [localhost:5000/index.html](localhost:5000/index.html) path in your browser to obtain home page. 
+After please open [localhost:5000/](http://localhost:5000/) or [localhost:5000/index.html](http://localhost:5000/index.html) path in your browser to obtain home page. 
 It will show you a page with available endpoints and usage details:
 
 ![Screenshot](static/demo.png)
@@ -76,6 +80,9 @@ if __name__ == "__main__":
 
 ## Release History
 
+* 1.2.0
+    * Add static code analysis
+    * Support travis CI and tests coverage
 * 1.1.0
     * Add `index.html` page with API description
 * 1.0.1
