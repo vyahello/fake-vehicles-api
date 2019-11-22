@@ -9,17 +9,17 @@ _data = {"id_": 9, "manufacturer": "Audi", "model": "S8", "year": 2002, "vin": "
 
 @pytest.fixture(scope="module")
 def response_success(client: TestClient) -> requests.Response:
-    return client.put("/rest/9", data=_data)
+    return client.put("/api/9", data=_data)
 
 
 @pytest.fixture(scope="module")
 def response_error(client: TestClient) -> requests.Response:
-    return client.put("/rest/9999", data=_data)
+    return client.put("/api/9999", data=_data)
 
 
 @pytest.fixture(scope="module")
 def response_validation(client: TestClient) -> requests.Response:
-    return client.put("/rest/9999", data={"manufacturer": "A" * 51, "model": "S" * 51, "year": 1899})
+    return client.put("/api/9999", data={"manufacturer": "A" * 51, "model": "S" * 51, "year": 1899})
 
 
 @smoke

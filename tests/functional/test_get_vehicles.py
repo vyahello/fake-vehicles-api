@@ -7,7 +7,7 @@ from tests.markers import smoke
 
 @pytest.fixture(scope="module")
 def response(client: TestClient) -> requests.Response:
-    return client.get("/rest")
+    return client.get("/api")
 
 
 @smoke

@@ -7,12 +7,12 @@ from tests.markers import smoke
 
 @pytest.fixture(scope="module")
 def response_success(client: TestClient) -> requests.Response:
-    return client.get("/rest/10")
+    return client.get("/api/10")
 
 
 @pytest.fixture(scope="module")
 def response_error(client: TestClient) -> requests.Response:
-    return client.get("/rest/9999")
+    return client.get("/api/9999")
 
 
 @smoke

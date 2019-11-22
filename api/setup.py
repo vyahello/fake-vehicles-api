@@ -23,7 +23,7 @@ class Setup:
 class MoveTo(NamedTuple):
     """The class represents holder for redirect route on action."""
 
-    root: str = "/rest"
+    root: str = "/api"
     home: str = "/"
     index: str = "/index.html"  # type: ignore
-    id_: str = "/rest/{vehicle_id}"
+    id_: str = "/api/{vehicle_id}"

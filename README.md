@@ -34,22 +34,22 @@ It will show you a page with available endpoints and usage details:
 
 ### API endpoints
 There are several endpoints already developed (others will be added soon):
-  - `GET` request on `/rest` endpoint to get list of all vehicles e.g:
-    > `curl localhost:5000/rest`
-  - `POST` request on `/rest` endpoint to create a vehicle e.g:
+  - `GET` request on `/api` endpoint to get list of all vehicles e.g:
+    > `curl localhost:5000/api`
+  - `POST` request on `/api` endpoint to create a vehicle e.g:
     > `curl -X POST \` \
     `-H "Content-type: application/json \"` \
     `-d {"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBAWV53589P465532"}' \` \
-    `localhost:5000/rest`
-  - `GET` request on `/rest/{id}` endpoint to get single vehicle e.g:
-    > `curl localhost:5000/rest/99`
-  - `PUT` request on `/rest/{id}` endpoint to update single vehicle e.g:
+    `localhost:5000/api`
+  - `GET` request on `/api/{id}` endpoint to get single vehicle e.g:
+    > `curl localhost:5000/api/99`
+  - `PUT` request on `/api/{id}` endpoint to update single vehicle e.g:
     > `curl -X PUT \` \
     `-H "Content-type: application/json" \` \
     `-d '{"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBAWV53589P465532"}' \` \
-    `localhost:5000/rest/99`
-  - `DELETE` request on `/rest/{id}` to delete single vehicle e.g:
-    > `curl -X DELETE localhost:5000/rest/99`
+    `localhost:5000/api/99`
+  - `DELETE` request on `/api/{id}` to delete single vehicle e.g:
+    > `curl -X DELETE localhost:5000/api/99`
 
 ### Testing
 Project is covered with both **_unittests_** on code basis and **_functional_** tests on REST API endpoints with [pytest](https://docs.pytest.org/en/latest) testing framework.
@@ -66,7 +66,7 @@ Please run next command from the root directory to start testing:
 Please open `test-report.html` file in your browser to see testing report.
 
 ### Debugging
-In case of code debugging we use a contemporary [pdb++](https://pypi.org/project/pdbpp) package as an easy-way to track your code.
+In case of code debugging please use contemporary [pdb++](https://pypi.org/project/pdbpp) package as an easy-way to track your code.
 It is wrapper of a builtin [pbd](https://docs.python.org/3/library/pdb.html) package but with features extensions.
 
 To make it work just install it from `requirements-dev.txt` file and use [breakpoint()](https://docs.python.org/3/library/functions.html#breakpoint) function call e.g:
@@ -118,6 +118,8 @@ heroku logs --tail
 
 ## Release History
 
+* 1.3.1
+    * Use "api" endpoint for app APIs
 * 1.3.0
     * Deploy app on heroku at https://fake-vehicles-api.herokuapp.com
 * 1.2.0
@@ -132,7 +134,7 @@ heroku logs --tail
     * Build basic CRUD API endpoints
 
 ## Meta
-My name – Volodymyr Yahello vyahello@gmail.com
+Author – Volodymyr Yahello vyahello@gmail.com
 
 Distributed under the `MIT` license. See [LICENSE](LICENSE.md) for more information.
 

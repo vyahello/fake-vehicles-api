@@ -8,17 +8,17 @@ from tests.markers import smoke
 
 @pytest.fixture(scope="module")
 def response_success(client: TestClient) -> requests.Response:
-    return client.post("/rest", data={"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBAWV53589P465532"})
+    return client.post("/api", data={"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBAWV53589P465532"})
 
 
 @pytest.fixture(scope="module")
 def response_missing_fields(client: TestClient) -> requests.Response:
-    return client.post("/rest", data={"foo": "bar"})
+    return client.post("/api", data={"foo": "bar"})
 
 
 @pytest.fixture(scope="module")
 def response_fields_validation(client: TestClient) -> requests.Response:
-    return client.post("/rest", data={"manufacturer": "A" * 51, "model": "A" * 51, "year": 2051})
+    return client.post("/api", data={"manufacturer": "A" * 51, "model": "A" * 51, "year": 2051})
 
 
 @smoke
