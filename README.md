@@ -88,6 +88,10 @@ if __name__ == "__main__":
 Please follow instructions from - https://python-responder.org/en/latest/deployment.html
 
 - Install heroku following by - https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+- Configure [Procfile](Procfile)
+```text
+web: gunicorn vehicle_api:api_app
+```
 - Login to heroku
 ```bash
 heroku login
@@ -100,6 +104,10 @@ heroku create fake-vehicles-api
 ```bash
 git add . && git commit -m "My first heroku app" && git push heroku master
 ```
+- Spin up dynos for web
+```bash
+heroku ps:scale web=1
+```
 - Check heroku logs
 ```bash
 heroku logs --tail
@@ -108,6 +116,8 @@ heroku logs --tail
 
 ## Release History
 
+* 1.3.0
+    * Deploy app on heroku at https://fake-vehicles-api.herokuapp.com
 * 1.2.0
     * Add static code analysis
     * Support travis CI and tests coverage
