@@ -1,9 +1,11 @@
 # Mock vehicles API
 >A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) 🌟 python WEB API toolkit framework. 
-> You can try it out at [https://fake-vehicles-api.herokuapp.com](https://fake-vehicles-api.herokuapp.com) as it is deployed on heroku.
 >This project is built only as a sample REST API toolkit.
 >
 >Fake data was generated from cool https://www.mockaroo.com source.
+>
+> You can try it out at [https://fake-vehicles-api.herokuapp.com](https://fake-vehicles-api.herokuapp.com) as it is deployed on heroku.
+
 
 [![Build Status](https://travis-ci.org/vyahello/fake-vehicles-api.svg?branch=master)](https://travis-ci.org/vyahello/fake-vehicles-api)
 [![Coverage Status](https://coveralls.io/repos/github/vyahello/fake-vehicles-api/badge.svg?branch=master)](https://coveralls.io/github/vyahello/fake-vehicles-api?branch=master)
@@ -88,6 +90,10 @@ if __name__ == "__main__":
 Please follow instructions from - https://python-responder.org/en/latest/deployment.html
 
 - Install heroku following by - https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+- Configure [Procfile](Procfile)
+```text
+web: gunicorn vehicle_api:api_app
+```
 - Login to heroku
 ```bash
 heroku login
@@ -100,6 +106,10 @@ heroku create fake-vehicles-api
 ```bash
 git add . && git commit -m "My first heroku app" && git push heroku master
 ```
+- Spin up dynos for web
+```bash
+heroku ps:scale web=1
+```
 - Check heroku logs
 ```bash
 heroku logs --tail
@@ -108,6 +118,8 @@ heroku logs --tail
 
 ## Release History
 
+* 1.3.0
+    * Deploy app on heroku at https://fake-vehicles-api.herokuapp.com
 * 1.2.0
     * Add static code analysis
     * Support travis CI and tests coverage
