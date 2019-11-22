@@ -1,30 +1,18 @@
-from dataclasses import FrozenInstanceError
-import pytest
-from api.app import Setup
-from tests.markers import unittest
+from apistar import Route, App
+from api.app import ROUTES, api_app
 
 
-@pytest.fixture(scope="module", autouse=True)
-def setup() -> Setup:
-    return Setup(host="name", port=7878, debug=True)
+def test_count_routes() -> None:
+    assert len(ROUTES) == 6
 
 
-@unittest
-def test_setup_host(setup: Setup) -> None:
-    assert setup.host == "name"
+def test_first_route_type() -> None:
+    assert isinstance(ROUTES[0], Route)
 
 
-@unittest
-def test_setup_port(setup: Setup) -> None:
-    assert setup.port == 7878
+def test_last_route_type() -> None:
+    assert isinstance(ROUTES[-1], Route)
 
 
-@unittest
-def test_setup_debug(setup: Setup) -> None:
-    assert setup.debug
-
-
-@unittest
-def test_frozen_setup(setup: Setup) -> None:
-    with pytest.raises(FrozenInstanceError):
-        setup.debug = False
+def test_app() -> None:
+    assert isinstance(api_app, App)

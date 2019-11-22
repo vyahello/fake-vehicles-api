@@ -1,5 +1,6 @@
 """The module contains API to HTTP WEB support."""
 from enum import Enum
+from apistar.http import JSONResponse
 
 
 class Status(Enum):
@@ -22,3 +23,6 @@ class Method(Enum):
     POST: str = "post"
     PUT: str = "put"
     DELETE: str = "delete"
+
+
+RESPONSE_ERROR = JSONResponse(content={"error": "vehicle not found"}, status_code=Status.NOT_FOUND.code)

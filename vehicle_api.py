@@ -1,4 +1,5 @@
-from api.app import api_app, Setup
+from api.app import api_app
+from api.setup import Setup
 
 
 def _run_vehicle_api(setup: Setup) -> None:
