@@ -29,4 +29,3 @@ def test_index_status_code(response_index: requests.Response) -> None:
 
 def test_index_status_content(response_index: requests.Response) -> None:
     assert "Fake vehicles" in response_index.text
-

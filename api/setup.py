@@ -25,5 +25,5 @@ class MoveTo(NamedTuple):
 
     root: str = "/rest"
     home: str = "/"
-    index: str = "/index.html"
+    index: str = "/index.html"  # type: ignore
     id_: str = "/rest/{vehicle_id}"

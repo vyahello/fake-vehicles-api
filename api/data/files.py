@@ -1,6 +1,6 @@
 """The module contains API to work wih files."""
 from abc import abstractmethod
-from typing import ContextManager, TextIO, Any, Tuple
+from typing import ContextManager, Any, Tuple, IO
 
 
 def safe_file_of(filename: str, extensions: Tuple[str, ...]) -> str:
@@ -10,7 +10,7 @@ def safe_file_of(filename: str, extensions: Tuple[str, ...]) -> str:
     return filename
 
 
-class File(ContextManager):
+class File(ContextManager["File"]):
     """The class represents abstraction for a file."""
 
     @abstractmethod
@@ -26,7 +26,7 @@ class TextFile(File):
     """The class represents concrete text file."""
 
     def __init__(self, name: str, mode: str) -> None:
-        self._stream: TextIO = open(name, mode)
+        self._stream: IO[Any] = open(name, mode)
 
     def write(self, data: str) -> None:
         self._stream.write(data)

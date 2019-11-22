@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from apistar import App, Route
 from apistar.http import JSONResponse
 from api import list_of_vehicles, move_to, setup
@@ -55,7 +55,7 @@ def get_vehicle(vehicle_id: int) -> JSONResponse:
     Returns:
         http json response
     """
-    vehicle: Vehicle = list_of_vehicles.get(vehicle_id)
+    vehicle: Optional[Vehicle] = list_of_vehicles.get(vehicle_id)
     if not vehicle:
         return RESPONSE_ERROR
     return JSONResponse(vehicle, status_code=Status.SUCCESS.code)
@@ -109,7 +109,7 @@ def delete_vehicle(vehicle_id: int) -> JSONResponse:
 
 ROUTES = [
     Route(move_to.home, method=Method.GET.name, handler=home),
-    Route(move_to.index, method=Method.GET.name, handler=lambda: home()),
+    Route(move_to.index, method=Method.GET.name, handler=lambda: home()),  # pylint:disable=unnecessary-lambda
     Route(move_to.root, method=Method.GET.name, handler=list_vehicles),
     Route(move_to.root, method=Method.POST.name, handler=create_vehicle),
     Route(move_to.id_, method=Method.GET.name, handler=get_vehicle),

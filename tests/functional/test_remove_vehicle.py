@@ -24,7 +24,7 @@ def test_delete_vehicle_status(response: requests.Response) -> None:
 
 
 @smoke
-def test_delete_vehicle_status(response: requests.Response) -> None:
+def test_delete_vehicle_content(response: requests.Response) -> None:
     assert response.json() == {}
 
 
