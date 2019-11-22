@@ -9,6 +9,7 @@ if os.path.basename(os.getcwd()) == "api":
 
 move_to: MoveTo = MoveTo()
 setup: Setup = Setup()
+
 storage = VehicleStorage(os.path.join(os.getcwd(), "api/data/vehicles.json"))
 list_of_vehicles: Dict[int, Any] = storage.list_vehicles()
 LIST_OF_MANUFACTURERS: List[str] = list(storage.list_manufacturers())

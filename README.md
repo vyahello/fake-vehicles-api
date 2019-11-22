@@ -1,12 +1,12 @@
 # Mock vehicle API
-A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) python WEB API toolkit framework. 
-This project is built only as a sample REST API toolkit.
-
-Fake data was generated from cool https://www.mockaroo.com source.
+>A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) 🌟 python WEB API toolkit framework. 
+>This project is built only as a sample REST API toolkit.
+>
+>Fake data was generated from cool https://www.mockaroo.com source.
 
 ## Tools
 > - `python 3.8`
-> - `RESTful API` approach
+> - `RESTful API`
 > - `pytest`
 
 ## Usage
@@ -14,6 +14,11 @@ Run next command from the root of the project:
 ```bash
 ~ python vehicle_api.py
 ```
+
+After please open `localhost:5000/` or `localhost:5000/index.html` path in your browser to obtain home page. 
+It will show you a page with available endpoints and usage details:
+
+![Screenshot](static/demo.png)
 
 ### API endpoints
 There are several endpoints already developed (others will be added soon):

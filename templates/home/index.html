@@ -1,0 +1,45 @@
+{% extends "/shared/_layout.html" %}
+
+{% block content %}
+        <div class="content">
+            <h1><span class="font-semi-bold">Fake vehicles &#128653 &#128664 REST API</span></h1>
+            <p class="lead">
+                A RESTful API service for fake vehicles followed by <a href="https://docs.apistar.com/">API Star</a> &#127775 framework!<br>
+                <br>
+                <strong>API endpoints:</strong>
+            <ul>
+                <li>
+                    <strong>Get list of all vehicles:</strong><br>
+                    <a class="get" href="/rest">GET /rest</a>
+                    <br>
+                    <div class="request"><i>curl -X GET localhost:5000/rest</i></div>
+                </li>
+                <li>
+                    <strong>Create a single vehicle:</strong><br>
+                    <a class="post" href="/rest">POST /rest</a>
+                    <br>
+                    <div class="request"><i>curl -X POST -H "Content-type: application/json -d '{"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBA"}'</i></div>
+                </li>
+                <li>
+                    <strong>Get single vehicle:</strong><br>
+                    <a class="get" href="/rest/101">GET /rest/101</a>
+                    <br>
+                    <div class="request"><i>curl -X GET localhost:5000/rest</i></div>
+                </li>
+                <li>
+                    <strong>Update single vehicle:</strong><br>
+                    <a class="put" href="/rest/101">PUT /rest/101</a>
+                    <br>
+                    <div class="request"><i>curl -X PUT -H "Content-type: application/json -d '{"manufacturer": "Toyota", "model": "Camry", "year": 2014, "vin": "ECA"}'</i></div>
+                </li>
+                <li>
+                    <strong>Delete single vehicle:</strong><br>
+                    <a class="delete" href="/rest/101">DELETE /rest/101</a>
+                    <br>
+                    <div class="request"><i>curl -X DELETE localhost:5000/rest/99</i></div>
+                </li>
+            </ul>
+            </p>
+        </div>
+
+{% endblock %}

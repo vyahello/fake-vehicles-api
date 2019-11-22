@@ -1,0 +1,43 @@
+.request {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.get {
+    color: #2b542c;
+    background-color: #c4ffbc;
+}
+
+.post {
+    color: #ae5900;
+    background-color: #ffe2c4;
+}
+
+.put {
+    color: #2957e1;
+    background-color: #a5bcff;
+}
+
+.delete {
+    color: #ff1e00;
+    background-color: #ffc7ca;
+}
+
+
+.response_formats span {
+    font-weight: bold;
+    color: #048b85;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+pre {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 2px;
+}

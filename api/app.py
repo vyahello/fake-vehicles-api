@@ -6,9 +6,9 @@ from api.vehicle.vehicles import Vehicle
 from api.web.support import Method, Status, RESPONSE_ERROR
 
 
-def index() -> str:
+def home() -> str:
     """Return welcome page."""
-    return api_app.render_template("<h1>Fake Vehicles REST API</h1>")
+    return api_app.render_template("home/index.html")
 
 
 def list_vehicles() -> List[Vehicle]:
@@ -108,7 +108,8 @@ def delete_vehicle(vehicle_id: int) -> JSONResponse:
 
 
 ROUTES = [
-    Route(move_to.index, method=Method.GET.name, handler=index),
+    Route(move_to.home, method=Method.GET.name, handler=home),
+    Route(move_to.index, method=Method.GET.name, handler=lambda: home()),
     Route(move_to.root, method=Method.GET.name, handler=list_vehicles),
     Route(move_to.root, method=Method.POST.name, handler=create_vehicle),
     Route(move_to.id_, method=Method.GET.name, handler=get_vehicle),
@@ -119,4 +120,4 @@ api_app: App = App(ROUTES, setup.dir_.templates, setup.dir_.static)
 
 
 if __name__ == "__main__":
-    api_app.serve(setup.host, setup.port, setup.debug)
+    api_app.serve(setup.host, setup.port, True)

@@ -24,5 +24,6 @@ class MoveTo(NamedTuple):
     """The class represents holder for redirect route on action."""
 
     root: str = "/rest"
+    home: str = "/"
     index: str = "/index.html"
     id_: str = "/rest/{vehicle_id}"
