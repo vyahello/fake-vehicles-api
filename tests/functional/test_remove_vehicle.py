@@ -10,12 +10,12 @@ _initial_count: int = len(list_of_vehicles)
 
 @pytest.fixture(scope="module")
 def response(client: TestClient) -> requests.Response:
-    return client.delete("/10")
+    return client.delete("/rest/10")
 
 
 @pytest.fixture(scope="module")
 def response_error(client: TestClient) -> requests.Response:
-    return client.get("/10")
+    return client.get("/rest/10")
 
 
 @smoke
@@ -30,7 +30,7 @@ def test_delete_vehicle_status(response: requests.Response) -> None:
 
 @smoke
 def test_count_vehicles(client: TestClient) -> None:
-    assert len(client.get("/").json()) == _initial_count
+    assert len(client.get("/rest").json()) == _initial_count
 
 
 @smoke

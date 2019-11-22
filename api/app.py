@@ -4,9 +4,9 @@ from api.routes import index, list_vehicles, create_vehicle, get_vehicle, update
 from dataclasses import dataclass
 from api.web.support import Method
 
-_root: str = "/"
+_root: str = "/rest"
 _index: str = "/index.html"
-_id: str = "/{vehicle_id}"
+_id: str = "/rest/{vehicle_id}"
 
 
 @dataclass(frozen=True)
