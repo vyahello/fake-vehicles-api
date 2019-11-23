@@ -70,7 +70,8 @@ function run-code-analysis {
     echo "Running code analysis ..."
     remove-pycache-trash
     run-unittests || store-failures "Unittests are failed!"
-    run-flake8-analysis || store-failures "flake8 is failed!"
+    run-pylint-analysis || store-failures "pylint analysis is failed!"
+    run-flake8-analysis || store-failures "flake8 analysis is failed!"
     run-mypy-analysis || store-failures "mypy analysis is failed!"
     run-black-analysis || store-failures "black analysis is failed!"
 
