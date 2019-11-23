@@ -94,6 +94,10 @@ Please follow instructions from - https://python-responder.org/en/latest/deploym
 ```text
 web: gunicorn vehicle_api:api_app
 ```
+- Create `runtime.txt` file
+```text
+python-3.8.0
+```
 - Login to heroku
 ```bash
 heroku login
