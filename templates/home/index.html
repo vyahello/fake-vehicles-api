@@ -18,25 +18,25 @@
                     <strong>Create a single vehicle:</strong><br>
                     <a class="post" href="/api">POST /api</a>
                     <br>
-                    <div class="request"><i>curl -X POST -H "Content-type: application/json" -d '{"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBA"}'</i></div>
+                    <div class="request"><i>curl -X POST -H "Content-type: application/json" -d '{"manufacturer": "BMW", "model": "X5", "year": 2011, "vin": "WBA"}' localhost:5000/api</i></div>
                 </li>
                 <li>
                     <strong>Get single vehicle:</strong><br>
                     <a class="get" href="/api/101">GET /api/101</a>
                     <br>
-                    <div class="request"><i>curl -X GET localhost:5000/api</i></div>
+                    <div class="request"><i>curl -X GET localhost:5000/api/101</i></div>
                 </li>
                 <li>
                     <strong>Update single vehicle:</strong><br>
                     <a class="put" href="/api/101">PUT /api/101</a>
                     <br>
-                    <div class="request"><i>curl -X PUT -H "Content-type: application/json" -d '{"manufacturer": "Toyota", "model": "Camry", "year": 2014, "vin": "ECA"}'</i></div>
+                    <div class="request"><i>curl -X PUT -H "Content-type: application/json" -d '{"manufacturer": "Toyota", "model": "Camry", "year": 2014, "vin": "ECA"}' localhost:5000/api/101</i></div>
                 </li>
                 <li>
                     <strong>Delete single vehicle:</strong><br>
                     <a class="delete" href="/api/101">DELETE /api/101</a>
                     <br>
-                    <div class="request"><i>curl -X DELETE localhost:5000/api/99</i></div>
+                    <div class="request"><i>curl -X DELETE localhost:5000/api/101</i></div>
                 </li>
             </ul>
             </p>
