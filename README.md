@@ -10,6 +10,9 @@
 [![Build Status](https://travis-ci.org/vyahello/fake-vehicles-api.svg?branch=master)](https://travis-ci.org/vyahello/fake-vehicles-api)
 [![Coverage Status](https://coveralls.io/repos/github/vyahello/fake-vehicles-api/badge.svg?branch=master)](https://coveralls.io/github/vyahello/fake-vehicles-api?branch=master)
 
+[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
+
 ## Tools/features
 > - `python 3.8`
 > - `RESTful API`
