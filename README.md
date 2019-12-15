@@ -1,3 +1,13 @@
+[![Build Status](https://travis-ci.org/vyahello/fake-vehicles-api.svg?branch=master)](https://travis-ci.org/vyahello/fake-vehicles-api)
+[![Coverage Status](https://coveralls.io/repos/github/vyahello/fake-vehicles-api/badge.svg?branch=master)](https://coveralls.io/github/vyahello/fake-vehicles-api?branch=master)
+[![Forks](https://img.shields.io/github/forks/vyahello/fake-vehicles-api)](https://github.com/vyahello/fake-vehicles-api/network/members)
+[![Stars](https://img.shields.io/github/stars/vyahello/fake-vehicles-api)](https://github.com/vyahello/fake-vehicles-api/stargazers)
+[![Issues](https://img.shields.io/github/issues/vyahello/fake-vehicles-api)](https://github.com/vyahello/fake-vehicles-api/issues)
+
+[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
+[![Hits-of-Code](https://hitsofcode.com/github/vyahello/fake-vehicles-api)](https://hitsofcode.com/view/github/vyahello/fake-vehicles-api)
+
 # Mock vehicles API
 >A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) 🌟 python WEB API toolkit framework. 
 >This project is built only as a sample REST API toolkit.
@@ -5,14 +15,6 @@
 >Fake data was generated from cool https://www.mockaroo.com source.
 >
 > You can try it out at [https://fake-vehicles-api.herokuapp.com](https://fake-vehicles-api.herokuapp.com) as it is deployed on heroku.
-
-
-[![Build Status](https://travis-ci.org/vyahello/fake-vehicles-api.svg?branch=master)](https://travis-ci.org/vyahello/fake-vehicles-api)
-[![Coverage Status](https://coveralls.io/repos/github/vyahello/fake-vehicles-api/badge.svg?branch=master)](https://coveralls.io/github/vyahello/fake-vehicles-api?branch=master)
-
-[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
-[![Hits-of-Code](https://hitsofcode.com/github/vyahello/fake-vehicles-api)](https://hitsofcode.com/view/github/vyahello/fake-vehicles-api)
 
 ## Tools/features
 > - `python 3.8`
