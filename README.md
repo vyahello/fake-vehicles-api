@@ -29,7 +29,7 @@ In addition it is `fully type annotated` and covered with bunch of static code a
 
 Run next command from the root directory of the project:
 ```bash
-python vehicle_api.py
+python -m api
 ```
 
 After please open [localhost:5000/](http://localhost:5000/) or [localhost:5000/index.html](http://localhost:5000/index.html) path in your browser to obtain home page. 
