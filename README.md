@@ -1,25 +1,34 @@
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Checked with pylint](https://img.shields.io/badge/pylint-checked-blue)](https://www.pylint.org)
+[![Checked with flake8](https://img.shields.io/badge/flake8-checked-blue)](http://flake8.pycqa.org/)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![Build Status](https://travis-ci.org/vyahello/fake-vehicles-api.svg?branch=master)](https://travis-ci.org/vyahello/fake-vehicles-api)
 [![Coverage Status](https://coveralls.io/repos/github/vyahello/fake-vehicles-api/badge.svg?branch=master)](https://coveralls.io/github/vyahello/fake-vehicles-api?branch=master)
-[![Issues](https://img.shields.io/github/issues/vyahello/fake-vehicles-api)](https://github.com/vyahello/fake-vehicles-api/issues)
-[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 [![Hits-of-Code](https://hitsofcode.com/github/vyahello/fake-vehicles-api)](https://hitsofcode.com/view/github/vyahello/fake-vehicles-api)
 
 # Fake Vehicles API
-> A lightweight fake vehicle API written in [API Star](https://docs.apistar.com/) 🌟 python WEB API toolkit framework. 
+> A lightweight vehicle (fake) API written in [API Star](https://docs.apistar.com/) 🌟 python WEB API toolkit framework. 
 > This project is built only as a sample REST API toolkit.
 >
-> Fake data was generated from cool https://www.mockaroo.com source.
-
+> Fake data was generated from https://www.mockaroo.com source.
 
 ## Tools
-- `python 3.8`
-- `RESTful API`
-- `pytest`
-- `travis CI`
-- `heroku`
 
-In addition it is `fully type annotated` and covered with bunch of static code analysis tools like `mypy`, `flake8`, `pylint`, `pydocstyle` and `black`.
+### Production
+
+- python 3.8
+- [API Star](https://docs.apistar.com/) framework
+- [heroku](http://fake-vehicles-api.herokuapp.com) deployment
+
+### Development
+- [travis](https://travis-ci.org/) CI
+- [pytest](https://pypi.org/project/pytest/) framework
+- [black](https://black.readthedocs.io/en/stable/) code formatter
+- [mypy](http://mypy.readthedocs.io/en/latest) static typer
+- [pylint](https://www.pylint.org/) code style
+- [flake8](http://flake8.pycqa.org/en/latest/) code formatter
 
 ## Usage
 
@@ -27,12 +36,14 @@ In addition it is `fully type annotated` and covered with bunch of static code a
 
 ### Quick start
 
-Run next command from the root directory of the project:
+Please run next commands to start an app:
 ```bash
+git clone git@github.com:aiopymake/fake-vehicles-api.git
+pip install -r requirements.txt
 python -m api
 ```
 
-After please open [localhost:5000/](http://localhost:5000/) or [localhost:5000/index.html](http://localhost:5000/index.html) path in your browser to obtain home page. 
+Then please open [localhost:5000/](http://localhost:5000/) path in your browser to obtain home page. 
 
 ## Development notes
 
@@ -66,59 +77,34 @@ There are several endpoints already developed (others will be added soon):
     ```
 
 ### Testing
-Project is covered with both **_unittests_** and **_functional_** tests on REST API endpoints using [pytest](https://docs.pytest.org/en/latest) testing framework.
+Project is covered with both **_unit_** and **_functional_** tests on REST API endpoints using [pytest](https://docs.pytest.org/en/latest) testing framework.
 
 Please run next command from the root directory to start testing:
 ```bash
 pytest
 ```
-> If you would like to run only `smoke` tests or `unittests` please run tests with corresponding marker e.g:
-> 
-> ```bash
-> pytest -m smoke
-> ```
+
+Run only smoke tests:
+```bash
+pytest -m smoke
+```
+
+Run only unit tests:
+```bash
+pytest -m unittests
+```
 
 Please open `test-report.html` file in your browser to see testing report.
 
 
-### Heroku deployment
-Please follow instructions from - https://python-responder.org/en/latest/deployment.html
+### Deployment
 
-- Install heroku following by - https://devcenter.heroku.com/articles/heroku-cli#download-and-install
-- Configure [Procfile](Procfile)
-```text
-web: gunicorn vehicle_api:api_app
-```
-- Create `runtime.txt` file
-```text
-python-3.8.0
-```
-- Login to heroku
-```bash
-heroku login
-```
-- Create an application
-```bash
-heroku create fake-vehicles-api
-```
-- Commit and push repo into a heroku
-```bash
-git add . && git commit -m "My first heroku app" && git push heroku master
-```
-- Spin up dynos for web
-```bash
-heroku ps:scale web=1
-```
-- Check heroku logs
-```bash
-heroku logs --tail
-```
-- Open an application via browser: https://fake-vehicles-api.herokuapp.com
+Please refer to [deployment](DEPLOYMENT.md) page to get instructions on how to provision an app.
 
 ## Meta
 Author – _Volodymyr Yahello_.
 
-Distributed under the `MIT` license. See [LICENSE](LICENSE.md) for more information.
+Distributed under the `MIT` license. See [license](LICENSE.md) for more information.
 
 You can reach out me at:
 * [vyahello@gmail.com](vyahello@gmail.com)
