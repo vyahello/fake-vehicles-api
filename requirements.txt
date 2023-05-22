@@ -1,4 +1,4 @@
 ujson==1.35
 apistar==0.5.41
-requests==2.22.0
+requests==2.31.0
 gunicorn==20.0.0
